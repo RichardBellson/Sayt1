@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Phu Quoc — очищенный голос</title>
+  <style>
+    :root {
+      --bg0: #12212b;
+      --bg1: #1d3644;
+      --sand: #e8d6b3;
+      --foam: #f7f1e6;
+      --accent: #2f8f7b;
+      --accent2: #d9783c;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      min-height: 100dvh;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      color: var(--foam);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #3a6a7a 0%, transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, #8a5a3a 0%, transparent 45%),
+        linear-gradient(165deg, var(--bg0), var(--bg1) 55%, #0e1a22);
+      display: grid;
+      place-items: center;
+      padding: 24px 18px 40px;
+    }
+    main {
+      width: min(440px, 100%);
+      display: grid;
+      gap: 18px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.6rem, 6vw, 2.1rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+    p {
+      margin: 0;
+      color: color-mix(in srgb, var(--foam) 78%, transparent);
+      line-height: 1.45;
+      font-size: 1rem;
+    }
+    .player {
+      margin-top: 6px;
+      padding: 18px;
+      border-radius: 18px;
+      background: color-mix(in srgb, #000 28%, transparent);
+      border: 1px solid color-mix(in srgb, var(--sand) 22%, transparent);
+      backdrop-filter: blur(8px);
+    }
+    audio {
+      width: 100%;
+      margin-top: 8px;
+    }
+    .actions {
+      display: grid;
+      gap: 10px;
+    }
+    a.btn {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: #08141a;
+      background: var(--sand);
+      font-weight: 700;
+      padding: 14px 16px;
+      border-radius: 14px;
+      font-size: 1.02rem;
+    }
+    a.btn.secondary {
+      background: transparent;
+      color: var(--foam);
+      border: 1px solid color-mix(in srgb, var(--foam) 35%, transparent);
+      font-weight: 600;
+    }
+    a.btn:active { transform: scale(0.98); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Phu Quoc Island</h1>
+    <p>Запись с очищенным голосом и убранным фоновым шумом.</p>
+    <div class="player">
+      <audio controls playsinline preload="metadata" src="./Phu_Quoc_Island_cleaned.m4a">
+        Ваш браузер не поддерживает аудио.
+      </audio>
+    </div>
+    <div class="actions">
+      <a class="btn" href="./Phu_Quoc_Island_cleaned.m4a" download="Phu_Quoc_Island_cleaned.m4a">Скачать M4A</a>
+      <a class="btn secondary" href="./Phu_Quoc_Island_cleaned.wav" download="Phu_Quoc_Island_cleaned.wav">Скачать WAV (24-bit)</a>
+    </div>
+  </main>
+</body>
+</html>
